@@ -25,6 +25,7 @@ public class ScoringSystem {
             processRules();
             if(rolls.isEmpty()) notAllScored = false;
         }
+        System.out.println("After scoring frame "+getTotal());
     }
 
     private void processRules() {
@@ -35,14 +36,16 @@ public class ScoringSystem {
 
 
     private void addToTotal(Result result) {
-//        total += (int) result.getValue();
-
         if(result.getValue() instanceof ProcessedRolls) {
             for (Roll roll : ((ProcessedRolls) result.getValue()).getMatchedRolls()) {
                 rolls.remove(roll.getKey());
             }
             total += ((ProcessedRolls) result.getValue()).getScore();
         }
+    }
+
+    public int factsSize() {
+        return rolls.size();
     }
 
     public int getTotal() {
