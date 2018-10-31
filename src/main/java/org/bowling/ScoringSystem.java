@@ -25,7 +25,7 @@ public class ScoringSystem {
             processRules();
             if(rolls.isEmpty()) notAllScored = false;
         }
-        System.out.println("After scoring frame "+getTotal());
+        //System.out.println("After scoring frame "+getTotal());
     }
 
     private void processRules() {
@@ -33,7 +33,6 @@ public class ScoringSystem {
         ruleBook.run(rolls);
         ruleBook.getResult().ifPresent(result -> addToTotal(result));
     }
-
 
     private void addToTotal(Result result) {
         if(result.getValue() instanceof ProcessedRolls) {

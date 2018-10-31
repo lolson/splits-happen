@@ -26,7 +26,7 @@ public class BasicRule {
 
     @Then
     public void then() {
-        System.out.println("Basic Rule, 1-9 found");
+        //System.out.println("Basic Rule, 1-9 found");
         Set<Roll> set = rolls.stream()
                 .filter(roll -> roll.getValue().matches("[1-9]"))
                 .collect(Collectors.toSet());

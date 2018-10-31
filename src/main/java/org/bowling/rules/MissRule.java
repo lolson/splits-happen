@@ -27,7 +27,7 @@ public class MissRule {
 
     @Then
     public void then() {
-        System.out.println("Miss Rule, - found");
+        //System.out.println("Miss Rule, - found");
         Set<Roll> set = rolls.stream()
                 .filter(roll -> roll.getValue().matches("-"))
                 .collect(Collectors.toSet());

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@Rule(order = 2)
+@Rule(order = 3)
 public class StrikeRule {
 
     private int score = 0;
@@ -26,7 +26,7 @@ public class StrikeRule {
 
     @Then
     public void then() {
-        System.out.println("Strike Rule, X found");
+        //System.out.println("Strike Rule, X found");
         Set<Roll> set = rolls.stream()
                 .filter(roll -> roll.getValue().matches("X"))
                 .collect(Collectors.toSet());

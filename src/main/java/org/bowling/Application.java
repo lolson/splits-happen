@@ -1,6 +1,9 @@
 package org.bowling;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 public class Application {
+//    private static final Logger log = LoggerFactory.getLogger(Application.class);
     private ScoringSystem scoringSystem;
 
     public Application() {
@@ -59,7 +62,14 @@ public class Application {
     public boolean isStrike(char roll) {
         return roll == 'X';
     }
+
     public boolean isSpare(char roll) {
         return roll == '/';
+    }
+
+    public static void main(String[] args) {
+        Application app = new Application();
+        app.bowl(args[0]);
+        System.out.println("You scored "+app.getScore());
     }
 }
