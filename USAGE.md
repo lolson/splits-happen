@@ -5,10 +5,10 @@ test cases specified in the development challenge requirements and all assert th
 correct total scores for the given inputs.  The following guide describes building and running the application and discusses some design considerations:
 
 ## Dependencies
-The one required dependency for building this Bowling Score application is Java:
+The one required dependency for building this Bowling Score application is Java.
 - JRE 1.8 or higher
 
-Gradle is an optional dependency to build and run this project:
+Gradle is an optional dependency to build and run this project.
 - Gradle 4.9 or higher (optional)
 
 ## Build and Test
@@ -31,11 +31,11 @@ Generate the program executable.
 
 Navigate to `splits-happen/build/install/splits-happen/bin`
 
-Run the executable with valid bowling game input:
+Run the executable with valid bowling game input.
 
     ./splits-happen X7/9-X-88/-6XXX81
 
-Which will show the calculated score in the console:   
+Which will show the calculated score in the console.   
 
     You scored 167
 
@@ -43,7 +43,7 @@ Alternatively, this application can be run with Gradle, for instance:
 
     gradle run --args="9-9-9-9-9-9-9-9-9-9-"
 
-Which will show the calculated score in the console:    
+Which will show the calculated score in the console.    
 
     > Task :run
     You scored 90
@@ -58,7 +58,7 @@ From the project root run:
 
     gradle test | grep Score
 
-To see the successful outcomes:
+And note the successful outcomes.
 
     Score: 150, given input: 5/5/5/5/5/5/5/5/5/5/5
     Score: 167, given input: X7/9-X-88/-6XXX81
