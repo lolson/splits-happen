@@ -70,6 +70,9 @@ public class Application {
     public static void main(String[] args) {
         Application app = new Application();
         app.bowl(args[0]);
-        System.out.println("You scored "+app.getScore());
+        String line = System.getProperty("line.separator");
+        System.out.println(line);
+        System.out.println("\t\tYou scored "+app.getScore());
+        System.out.println(line);
     }
 }
