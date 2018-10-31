@@ -25,13 +25,13 @@ Otherwise on a Windows OS run:
      gradlew.bat build
 
 ## Running
-1) Generate the program executable.
+Generate the program executable.
 
     gradle install
 
-2) Navigate to `splits-happen/build/install/splits-happen/bin`
+Navigate to `splits-happen/build/install/splits-happen/bin`
 
-3) Run the executable with valid bowling game input:
+Run the executable with valid bowling game input:
 
     ./splits-happen X7/9-X-88/-6XXX81
 
@@ -54,7 +54,7 @@ Or run with the gradle wrapper:
     ./gradlew run --args="9-9-9-9-9-9-9-9-9-9-"
 
 ## Validation Tests
-From the project root run
+From the project root run:
 
     gradle test | grep Score
 
@@ -70,7 +70,7 @@ Open build/reports/tests/test/index.html with a browser to view the success rate
 
 # Application Design
 
-The main application ingests a string of characters that describes a completed game of bowling.  It iterates over the string and based on the rules of play determines sets of bowls that should be scored together.  A scoring system class is called to process sets of rolls and calculates a running total score.  After the main application finds the tenth and last set of bowls to be scored it returns the final score found by the scoring system.
+The main application ingests a string of characters that describes a completed game of bowling.  It iterates over the input string and based on the rules of play determines sets of bowls that should be scored together.  A scoring system class is called to process sets of rolls and calculates a running total score.  After the main application finds the tenth and last set of bowls to be scored it returns the final score found by the scoring system.
 
 ## Data Flows
 
